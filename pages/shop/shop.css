@@ -1,0 +1,80 @@
+/* Default styles */
+.shopTitle {
+  margin-top: 50px; /* Adjust margin for smaller screens */
+  text-align: center;
+  font-size: 36px; /* Decrease font size for smaller screens */
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Add gap between grid items */
+  justify-items: center; /* Center items horizontally */
+}
+
+.product {
+  border-radius: 15px;
+  width: 250px; /* Adjust width for smaller screens */
+  height: 300px; /* Adjust height for smaller screens */
+  margin: 50px; /* Adjust margin for better spacing on smaller screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product img {
+  width: 100%; /* Make image fill its container */
+  max-width: 100%; /* Ensure image doesn't overflow its container */
+  height: auto; /* Allow image to adjust its height proportionally */
+}
+
+.product .description {
+  text-align: center;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.addToCartBttn {
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding: 5px 10px; /* Simplify padding declaration */
+  border-radius: 15px;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font */
+  font-size: 48px; /* Set font size */
+  color: #333; /* Set font color */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Add letter spacing */
+  margin: 0; /* Remove default margin */
+  padding-bottom: 10px; /* Add padding bottom */
+  display: inline-block; /* Display as inline-block */
+  position: relative; /* Position relative for pseudo-element */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .shopTitle {
+    font-size: 24px; /* Decrease font size for smaller screens */
+  }
+
+  .product {
+    width: 200px; /* Adjust width for smaller screens */
+    height: 250px; /* Adjust height for smaller screens */
+    margin: 30px; /* Adjust margin for better spacing on smaller screens */
+  }
+}

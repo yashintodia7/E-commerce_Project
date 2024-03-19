@@ -1,0 +1,87 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItem {
+  width: 700px;
+  height: 250px;
+  display: flex;
+
+  align-items: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin: 30px;
+}
+
+.cartItem img {
+  width: 200px;
+}
+
+.cartItem .description {
+  width: 100%;
+  font-size: 30px;
+}
+
+.countHandler input {
+  width: 40px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.checkout button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Button styles */
+.countHandler button {
+  padding: 8px 16px; /* Add padding for button size */
+  background-color: #007bff; /* Set button background color */
+  color: #fff; /* Set button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.countHandler button:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Input field styles */
+.countHandler input {
+  width: 50px; /* Set input field width */
+  padding: 8px; /* Add padding for input field size */
+  border: 1px solid #ccc; /* Add border for input field */
+  border-radius: 5px; /* Add rounded corners */
+  text-align: center; /* Center-align text in input field */
+  font-size: 16px; /* Set font size */
+}
+
+/* Adjust input field appearance on focus */
+.countHandler input:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Add box shadow on focus */
+}
+
+@media (max-width: 768px) {
+  .cartItem {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .cartItem .description {
+    margin-left: 0; /* Remove left margin for description */
+    margin-top: 20px; /* Add top margin for spacing */
+  }
+}
